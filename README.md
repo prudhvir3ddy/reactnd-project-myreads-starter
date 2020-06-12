@@ -18,6 +18,13 @@ MyReads project is a react application where you can organise your books into sh
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
+    ├── components # reusable components goes in this folder
+    │   ├── Book.js
+    │   ├── Fab.js
+    │   └── Shelf.js
+    ├── pages # each screen or a page you see in web goes in here
+    │   ├── Home.js 
+    │   └── Search.js
     ├── App.css # Styles for your app. Feel free to customize this as you desire.
     ├── App.js # This is the root of your app. Contains Routes to all endpoints.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
@@ -30,12 +37,9 @@ MyReads project is a react application where you can organise your books into sh
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
--> Pages contains all the main screens
--> Components contains all the individual reusable views that goes into pages
-
 ## Backend Server
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+[`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
 - [`getAll`](#getall)
 - [`update`](#update)

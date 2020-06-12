@@ -52,15 +52,17 @@ export default class Home extends Component {
   render() {
     const { books } = this.state;
     const shelfNames = ["currentlyReading", "wantToRead", "read"];
-    const currentlyReading = [];
-    const wantToRead = [];
-    const read = [];
-    books.map((book) => {
-      if (book.shelf === shelfNames[0]) currentlyReading.concat(book);
-      else if (book.shelf === shelfNames[1]) wantToRead.concat(book);
-      else if (book.shelf === shelfNames[2]) read.concat(book);
-    });
+    var currentlyReading = [];
+    var wantToRead = [];
+    var read = [];
 
+    for (var i = 0; i < books.length; i++) {
+      if (books[i].shelf === shelfNames[0])
+        currentlyReading = currentlyReading.concat(books[i]);
+      else if (books[i].shelf === shelfNames[1])
+        wantToRead = wantToRead.concat(books[i]);
+      else if (books[i].shelf === shelfNames[2]) read = read.concat(books[i]);
+    }
     const shelfs = [currentlyReading, wantToRead, read];
     return (
       <div className="app">
